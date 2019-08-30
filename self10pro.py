@@ -13,6 +13,8 @@ botStart = time.time()
 mulai = time.time()
 tokenOpen = codecs.open("prankbot.json","r","utf-8")
 token = json.load(tokenOpen)
+print("""\033["""+str(randint(0,1))+""";"""+str(randint(31,36))+"""m[ %s Start Bot ]\033[0m    
+"""%(Bot_startTime))
 sb = LINE(token["sb"])
 sb.log("Auth Token : " + str(sb.authToken))
 channelToken = sb.getChannelResult()
